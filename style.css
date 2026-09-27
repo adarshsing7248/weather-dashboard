@@ -1,0 +1,277 @@
+body{margin:0;
+ background-color: rgb(22, 38, 61);
+min-height: 100vh;}
+h3{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 24px;
+color: white;
+margin: 0;}
+h1{font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 35px;
+color: white;
+margin: 10px;
+letter-spacing: 4px;}
+nav{display:flex;
+    justify-content: space-evenly;
+align-items: center;
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 10px;
+background-color:rgba(11, 22, 40);
+height: 40px;
+box-shadow: 0 2px 10px;
+}
+nav a{text-decoration: none;
+color: white;
+font-size: 20px;
+font-weight: 400;}
+
+main{text-align: center;
+padding-top: 10px;
+padding-bottom: 10px;}
+#cityInput{border: 2px solid black;
+border-radius: 10px;
+text-align: center;
+width: 50%;
+padding: 10px;
+font-size: 20px;
+outline: none;}
+#cityInput:focus{
+    border-color:black;
+    box-shadow: 0 2px 10px;
+}
+button{
+    padding: 10px 18px;
+border-radius: 20px;
+font-size: 15px;
+    border: 2px solid black;
+   
+    cursor: pointer;
+    color: white;
+  background-color:rgba(11, 22, 40);
+    margin-left: 10px;
+    transition:transform 0.2s, background-color 0.2s;
+
+
+}
+button:hover{
+    transform: scaleX(1.05);
+    background-color:rgb(11, 28, 57);
+}
+
+
+#WeatherResult{
+    border: 2px solid black;
+    border-radius: 10px; 
+    padding:50px ;
+    margin:10px auto;
+    background-color:rgba(11, 22, 40);
+    width: 70%;
+    
+    box-shadow: 0 2px 10px;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 500;
+    height: auto;
+    transition:transform 0.2s, box-shadow 0.2s;
+
+}
+.sunrise,
+.sunset{
+    display: inline-block;
+    background-color: rgb(22, 38, 61);
+    color: white;
+    border-radius: 15px;
+    padding: 15px 25px;
+    margin: 10px;
+    min-width: 120px;
+    box-shadow: 0 2px 10px;
+    white-space: pre-line;
+}
+
+#WeatherResult:hover{transform: scale(0.95);
+box-shadow: 0 2px 10px;
+}
+@media(max-width:600px){
+
+    #cityInput{
+        width: 80%;
+    }
+    #WeatherResult{
+        width: 80%;
+        padding: 20px;
+        font-size: 20px;
+        height: auto;
+    }
+    button{
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
+
+.leftweather{
+    background-color: rgb(22, 38, 61);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 2px 10px;
+    color: white;
+}
+.mainTemperature{
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.Weathercondition{
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+.WeatherImage{
+    font-size: 55px;
+    margin-top: 10px;
+}
+.details{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 20px auto;
+}
+/* .temperatureCard{
+    background-color: rgb(22, 38, 61);
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 2px 10px;
+    padding: 10px;
+}
+.precipitationCard{
+    background-color: rgb(22, 38, 61);
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 2px 10px;
+    padding: 20px;
+}
+.humidityCard{
+    background-color: rgb(22, 38, 61);
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 2px 10px;
+    padding: 20px;
+}
+.conditionCard{
+    background-color: rgb(22, 38, 61);
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 2px 10px;
+    padding: 20px;
+} */
+.temperatureCard,
+.precipitationCard,
+.humidityCard,
+.conditionCard{
+    background-color: rgb(22, 38, 61);
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 2px 10px;
+    padding: 15px;
+    white-space: pre-line;
+}
+.forecastSection{
+    background-color: rgb(22, 38, 61);
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 2px 10px;
+    padding: 10px;
+    margin: auto;
+}
+.hourlyForecast{
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 15px;
+    background-color: rgb(27, 47, 74);
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 2px 10px;
+}
+.hourlyForecast div{
+    background-color: rgb(22, 38, 61);
+    border-radius: 15px;
+    padding: 12px;
+    min-width: 75px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 2px 8px;
+    white-space: pre-line;
+}
+.tenDayForecast{
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 15px;
+    background-color: rgb(27, 47, 74);
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 2px 10px;
+}
+.tenDayForecast div{
+    background-color: rgb(22, 38, 61);
+    border-radius: 15px;
+    padding: 12px;
+    min-width: 75px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 2px 8px;
+    white-space: pre-line;
+}
+
+.WeatherImage{
+    font-size: 80px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.sunInfo{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.sunrise,
+.sunset{
+    background-color: rgb(27, 47, 74);
+    color: white;
+    border-radius: 15px;
+    padding: 15px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 2px 10px;
+    font-size: 18px;
+    line-height: 28px;
+}
+#aboutSection{
+    display: none;
+    background-color: rgb(22, 38, 61);
+    color: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 900px;
+    box-shadow: 0 2px 10px;
+}
+
+#aboutSection h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#aboutSection p{
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+#aboutSection li{
+    margin: 15px 0;
+    line-height: 1.5;
+}
